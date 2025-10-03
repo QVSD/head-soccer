@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://d3d5da4qahgl5"]
+
+[ext_resource type="PackedScene" uid="uid://d38bp81pgq8av" path="res://scenes/ui.tscn" id="1_tefeu"]
+[ext_resource type="PackedScene" uid="uid://bs680dberwmhs" path="res://scenes/wall.tscn" id="2_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://to5ttu8i6aim" path="res://scenes/ground.tscn" id="3_tipki"]
+[ext_resource type="PackedScene" uid="uid://cvf5oaau2kcoc" path="res://scenes/player1.tscn" id="4_85g3d"]
+[ext_resource type="PackedScene" uid="uid://cb6ag0qhhqapu" path="res://scenes/player2.tscn" id="5_choun"]
+[ext_resource type="PackedScene" uid="uid://b5im2j2nrqbw7" path="res://scenes/ball1.tscn" id="6_ya4ey"]
+
+[node name="Node" type="Node"]
+
+[node name="TextureRect" parent="." instance=ExtResource("1_tefeu")]
+expand_mode = 1
+
+[node name="Wall2" parent="." groups=["wall"] instance=ExtResource("2_o6xl0")]
+position = Vector2(-5, 99)
+
+[node name="Wall" parent="." groups=["wall"] instance=ExtResource("2_o6xl0")]
+position = Vector2(1157, 97)
+
+[node name="Ground" parent="." groups=["ground"] instance=ExtResource("3_tipki")]
+position = Vector2(598, 643)
+
+[node name="Player1" parent="." groups=["player"] instance=ExtResource("4_85g3d")]
+position = Vector2(111, 291)
+
+[node name="Player2" parent="." groups=["player"] instance=ExtResource("5_choun")]
+position = Vector2(1015, 309)
+
+[node name="Ceiling" parent="." instance=ExtResource("3_tipki")]
+position = Vector2(600, -435)
+
+[node name="Ball1" parent="." instance=ExtResource("6_ya4ey")]
+position = Vector2(281, 125)

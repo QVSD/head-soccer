@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bflu8n62gudtm"
-path="res://.godot/imported/Idle (32x32).png-9e77c505a2fe9f7b1271d4d584bfd394.ctex"
+uid="uid://bfpdnvcxah5xb"
+path="res://.godot/imported/SoccerBall.png-ab846247a6849f148d8f55132b07a348.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/player1/Idle (32x32).png"
-dest_files=["res://.godot/imported/Idle (32x32).png-9e77c505a2fe9f7b1271d4d584bfd394.ctex"]
+source_file="res://assets/SoccerBall.png"
+dest_files=["res://.godot/imported/SoccerBall.png-ab846247a6849f148d8f55132b07a348.ctex"]
 
 [params]
 

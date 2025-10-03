@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwt6aj3ko5u08"
-path="res://.godot/imported/pseudoball.png-561d57d293335d69a1507c3b86fdd0df.ctex"
+uid="uid://c7330eggjcwdj"
+path="res://.godot/imported/Idle (32x32).png-bcb69bbc44a8691d20245d1a8466adb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/pseudoball.png"
-dest_files=["res://.godot/imported/pseudoball.png-561d57d293335d69a1507c3b86fdd0df.ctex"]
+source_file="res://assets/player2/Idle (32x32).png"
+dest_files=["res://.godot/imported/Idle (32x32).png-bcb69bbc44a8691d20245d1a8466adb4.ctex"]
 
 [params]
 

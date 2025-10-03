@@ -13,7 +13,14 @@ config_version=5
 config/name="head-soccer"
 run/main_scene="uid://d3d5da4qahgl5"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="res://assets/icon.svg"
+
+[global_group]
+
+ground=""
+wall=""
+player=""
+ball-example-1=""
 
 [input]
 
