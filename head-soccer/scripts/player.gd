@@ -9,6 +9,9 @@ const JUMP_VELOCITY = -400.0
 @export var action_right : String
 @export var action_jump : String
 
+var kick_strength := 600.0
+var velocity_influence := 0.5
+
 
 func _physics_process(delta: float) -> void:
 	if (velocity.x > 1 || velocity.x < -1):
@@ -33,3 +36,24 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	print("node2d entered")
+	if body.is_in_group("ball-example-1"):
+		var ball := body as RigidBody2D
+
+		# Compute direction
+		var dir = (ball.global_position - global_position).normalized()
+
+		# Base velocity kick
+		var new_vel = dir * kick_strength
+
+		# Add influence from player's velocity
+		new_vel += velocity * velocity_influence
+
+		# Directly set ball velocity (arcade style!)
+		ball.linear_velocity = new_vel
+		
+	
+	
