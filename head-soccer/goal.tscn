@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnxj248ahoigy"]
+
+[ext_resource type="Script" uid="uid://2mgsweolgme7" path="res://goal.gd" id="1_0qle8"]
+[ext_resource type="Texture2D" uid="uid://i8blm6hcpfy5" path="res://resources/goal/goal.png" id="1_6k3qi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6k3qi"]
+radius = 7.10562
+height = 79.2428
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qle8"]
+radius = 5.40984
+height = 204.977
+
+[node name="Goal" type="Node2D"]
+script = ExtResource("1_0qle8")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="UpperPostOfTheGoal" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(64, 416)
+rotation = 0.759218
+shape = SubResource("CapsuleShape2D_6k3qi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(12, 543)
+rotation = -2.92517
+shape = SubResource("CapsuleShape2D_0qle8")
+debug_color = Color(0.193705, 0.513886, 1, 0.42)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(59, 641, 87, 591, 86, 405, 38, 456, 3, 621, 9, 643)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(48, 515.762)
+scale = Vector2(0.185059, 0.429206)
+texture = ExtResource("1_6k3qi")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

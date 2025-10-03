@@ -15,6 +15,11 @@ run/main_scene="uid://d3d5da4qahgl5"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://game_manager.gd"
+Global="*res://global.gd"
+
 [input]
 
 p1_left={
